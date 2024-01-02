@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fruit Slicer Game</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles3.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="instructions">
+                Fruit cut!
+            </div>
+            <div id="fruitcontainer" class="playing">
+                <div id="score">
+                    <div class="scoreDisplay"><img src="scr.png" alt="">
+                        <span id="scoreValue">0</span></div>
+                </div>
+                <div class="tooltip">
+                    <div class="help">
+                        <img onclick="togglePoppup()" src="info (2).png" style="cursor: pointer !important;">
+                        <span class="tooltiptext">Info</span>
+                    </div>
+                </div>
+                
+                <!-- Pause button -->
+                <div class="pause" onclick="toggleHelpPause()">
+                    <img src="Pause.png">
+                </div>
+
+                <!-- Play button -->
+                <div class="play" >
+                    <img src="play.png">
+                </div>
+
+                <!-- For the popup window -->
+                <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" style="cursor: pointer;" onclick="togglePoppup()">&times;</div>
+                           <h2><b>Fruit Cut</b></h2>
+                           <h3>
+                                <p>Slice and dice your way through Fruit Slice. Sharpen your knife and get ready to chop until you drop!</p>
+                               <p> No matter how you slice it, this is a fun and challenging fruit game. You’ll be cutting up delicious apples, bananas, cucumbers, and watermelon wedges as they fall into a blender and become yummy smoothies. There are a few obstacles that will be standing in your way, though.</p>
+                                <p>You’ll only get a limited number of slices in each level, so you’ll have to choose each one wisely. The fewer you use, the more coins you'll earn to trade in for other types of fruit.</p>
+                           </h3> 
+                           <h2><b>How to play Fruit cut?</b></h2>
+                                <p>Fruit Slice is a physics game where you’ll receive a limited number of opportunities to dice up pieces of fruit and have them fall into a blender. Chop them small enough so they’ll slide over or past various obstacles.</p>
+                            <h2><b>Game Controls</b></h2>
+                                <p>LEFT CLICK AND HOLD while you create a path for your knife.<br>UNCLICK to slice the fruit.</p>
+                        </div>
+                    </div>
+
+                <!-- Trails left images -->
+                <div id="trialsleft"></div>
+                <div id="front">
+                    Are you ready for the ultimate slice action ? <br/>
+                    <img src="splash.png" alt="Fruit logo">
+                </div>
+                <img id="fruit1" class="fruit">
+            </div>
+            <div id="startReset">Start Game</div>
+            <!--for game over block-->
+            <div id="gameOver"></div>
+        </div>
+        <!--for audio files-->
+        <audio id="slicesound">
+            <source src="audio_slicefruit.mp3"></source>
+            <source src="audio_slicefruit.ogg"></source>
+            <source src="audio_slicefruit.wav"></source>
+        </audio>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="script3.js"></script>
+    </body>
+</html>
